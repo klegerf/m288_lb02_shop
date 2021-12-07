@@ -105,8 +105,8 @@ i:hover {
 
 .card {
     border: none;
-    background-color: red;
-    color: white;
+    background-color: #a4a4a4;
+    color: blue;
 }
 
 .col-md-8 {
