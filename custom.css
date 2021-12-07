@@ -1,0 +1,116 @@
+/*
+Author: Fabienne Kleger
+ */
+
+body {
+    width: 100%;
+    position: relative;
+}
+
+header {
+    position: relative;
+}
+
+* {
+    font-family: "Avenir Next";
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
+.nav-item {
+    font-weight: 400;
+}
+
+footer {
+    color: white;
+}
+
+video {
+    margin-top: 40px;
+}
+
+i {
+    font-size: 2rem;
+    color: white;
+    padding-left: 20px;
+}
+
+i:hover {
+    color: #a4a4a4;
+    transition: 0.4s;
+}
+
+.text-decoration-none {
+    color: white;
+    font-weight: bold;
+}
+
+.text-decoration-none:hover {
+    color: #a4a4a4;
+    transition: 0.4s;
+}
+
+.link-dark {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-dark:hover {
+    color: #a4a4a4;
+    transition: 0.4s;
+}
+
+.form-select-md {
+    padding: 0 0 0 10px;
+    margin: 40px 10px 0 20px;
+    height: 40px;
+}
+
+.btn {
+    border: none;
+}
+
+.btn:hover {
+    background-color: #a4a4a4;
+    transition: 0.4s;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    text-decoration-line: none;
+    color: white;
+}
+
+.bg-secondary {
+    background-color: #a4a4a4 !important;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link:hover {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+.page-link {
+    color: black;
+}
+
+.page-link:hover {
+    color: #a4a4a4;
+    transition: 0.4s;
+}
+
+.card {
+    border: none;
+    background-color: #a4a4a4;
+    color: white;
+}
+
+.col-md-8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
