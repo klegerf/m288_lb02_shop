@@ -86,8 +86,13 @@ const generateSummaryDOM = (warenkorb) => {
     return summary;
 }
 
+// Get the DOM elements for price summary
 /*const generatePriceDOM = (warenkorb) => {
     const pricesummary = document.createElement('h4');
-    pricesummary.textContent = `${warenkorb.length} CHF;
+    pricesummary.textContent = `${warenkorb.length} CHF`;
     return pricesummary;
-} */
+}
+
+
+function total += warenkorb.items.id] * item.id.price;
+document.getElementById("total").innerHTML ="TOTAL: CHF" + total; */
