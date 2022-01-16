@@ -35,19 +35,14 @@ const removeTask = (id) => {
     }
 }
 
-// Toggle the completed value for a given task
-/*const toggleTask = (id) => {
-    const task = warenkorb
-        .find((task) => task.id === id);
-
-    if (task) {
-        task.completed = !task.completed;
-    }
-}*/
-
 // Render application warenkorb
 const renderWarenkorb = (warenkorb) => {
     document.querySelector('#warenkorb').innerHTML = '';
+
+    document.querySelector('#summary').innerHTML = '';
+    document.querySelector('#summary')
+        .appendChild(generateSummaryDOM(warenkorb));
+
 
     warenkorb.forEach((item) => {
         document.querySelector('#warenkorb')
@@ -55,46 +50,38 @@ const renderWarenkorb = (warenkorb) => {
     })
 }
 
-// Get the DOM elements for an individual item
+// Get the DOM elements
 const generateWarenkorbDOM = (item) => {
     const itemEl = document.createElement('div');
     const itemText = document.createElement('div');
     itemText.className = "warenkorb-bold";
     const itemPrice = document.createElement('span');
-    /* const removeButton = document.createElement('button'); */
+    const removeButton = document.createElement('button');
+    removeButton.className = "btn btn-dark";
 
-    // Setup task checkbox
-    /*checkbox.setAttribute('type', 'checkbox')
-    checkbox.checked = task.completed;
-    taskEl.appendChild(checkbox);
-    checkbox.addEventListener('change', () => {
-        toggleTask(task.id);
-        saveWarenkorb(warenkorb);
-        renderWarenkorb(warenkorb);
-    }) */
-
-    // Setup the task text
+    // Setup the item text
     itemText.textContent = item.text;
     itemEl.appendChild(itemText);
 
+    // Setup the item price
     itemPrice.textContent = item.price;
     itemEl.appendChild(itemPrice);
 
-    // Setup the remove button
-    /*removeButton.textContent = 'x';
-    taskEl.appendChild(removeButton);
+    //Setup the remove button
+    removeButton.textContent = 'x';
+    itemEl.appendChild(removeButton);
     removeButton.addEventListener('click', () => {
-        removeTask(task.id);
+        removeTask(item.id);
         saveWarenkorb(warenkorb);
         renderWarenkorb(warenkorb);
-    }); */
+    });
 
     return itemEl;
 }
 
-// Get the DOM elements for list summary
-const generateSummaryDOM = (incompleteTasks) => {
-    const summary = document.createElement('h2');
-    summary.textContent = `You have ${incompleteTasks.length} tasks left`;
+// Get the DOM elements for Warenkorb summary
+const generateSummaryDOM = (warenkorb) => {
+    const summary = document.createElement('h4');
+    summary.textContent = `${warenkorb.length} Artikel im Warenkorb`;
     return summary;
 }
