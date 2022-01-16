@@ -141,3 +141,10 @@ i:hover {
     background-color: #212529;
     padding: 8px;
 }
+
+.remove-button {
+    border: none;
+    background-color: #a4a4a4;
+    color: white;
+    margin-left: 8px;
+}

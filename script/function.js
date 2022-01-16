@@ -57,7 +57,7 @@ const generateWarenkorbDOM = (item) => {
     itemText.className = "warenkorb-bold";
     const itemPrice = document.createElement('span');
     const removeButton = document.createElement('button');
-    removeButton.className = "btn btn-dark";
+    removeButton.className = "remove-button";
 
     // Setup the item text
     itemText.textContent = item.text;
