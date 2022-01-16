@@ -5,12 +5,12 @@ const colorList = ["schwarz", "weiss", "nature", "blau", "grün"];
 let sortimentListe =
     [
         {
-        "art": "T-Shirt Logo TR6",
+            "art": "T-Shirt Logo TR6",
             "farbe": colorList[0],
-        "bild": "images/articles/logo_arm.jpg",
-        "size": sizeList[2],
-        "beschreibung": "Unser Klassiker  ist für jede Gelegenheit passend.",
-        "preis": "20.–"
+            "bild": "images/articles/logo_arm.jpg",
+            "size": sizeList[2],
+            "beschreibung": "Unser Klassiker  ist für jede Gelegenheit passend.",
+            "preis": "20.–"
         },{
         "art": "Schlüsselband",
         "farbe": colorList[0],

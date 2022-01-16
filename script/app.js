@@ -5,19 +5,21 @@
 /**
  * Deklaration der Variablen
  */
+let warenkorb = getSavedWarenkorb();
+renderWarenkorb(warenkorb);
 let index;
 let artikel = undefined;
 
 /**
  * Ausgabe zeigen
  */
-function showUI(){
+function showUI() {
     //Identification
     let htmlObj = document.getElementById("beschrieb");
     htmlObj.innerHTML =
-        `Farbe: ${artikel.farbe}<br>`+
-        `Grösse: ${artikel.size}<br>`+
-        `Beschrieb: ${artikel.beschreibung}<br>`+
+        `Farbe: ${artikel.farbe}<br>` +
+        `Grösse: ${artikel.size}<br>` +
+        `Beschrieb: ${artikel.beschreibung}<br>` +
         `Preis: ${artikel.preis}`;
 
     htmlObj = document.getElementById("bild");
@@ -28,13 +30,28 @@ function showUI(){
     htmlObj.innerHTML =
         `${artikel.art}`;
 
-    //Index im Pagination-Element zeigen
-    htmlObj = document.getElementById("showIndex");
-    //clear
-    htmlObj.innerHTML = "";
-    //set
-    htmlObj.innerHTML = index;
+    let addToCart = document.getElementById("add-to-cart");
+    addToCart.addEventListener("click", addArticle);
 }
+
+/**
+ * Event for a new item
+ */
+function addArticle() {
+    //add new item to cart with push-method into JSON-object
+    warenkorb.push({
+        id: uuidv4(),
+        text: `${artikel.art}`+ "\n",
+        price: `${artikel.preis}`
+    });
+
+    //save tasks
+    saveWarenkorb(warenkorb);
+    //show tasks
+    renderWarenkorb(warenkorb);
+}
+
+
 
 
 /**
@@ -46,12 +63,12 @@ function showNext() {
     //Testausgabe auf der Console
     console.log(index);
     //Falls der index nicht definiert ist ...
-    if (index == undefined){
+    if (index == undefined) {
         //... dann setze den index auf 0 (Anfang)
         index = 0;
     } else {
         //... sonst falls der index eins kleiner als das Maximum ist
-        if (sortimentListe.length-1 > index){
+        if (sortimentListe.length - 1 > index) {
             //... erhöhe den index um 1
             index++;
         }
@@ -73,12 +90,12 @@ function showPrevious() {
     //Testausgabe auf der Console
     console.log(index);
     //Falls der index nicht definiert ist ...
-    if (index == undefined){
+    if (index == undefined) {
         //... dann setze den index auf 0 (Anfang)
         index = 0;
     } else {
         //... sonst falls der index grösser als das Minimum ist
-        if (index > 0){
+        if (index > 0) {
             //... vermindere den index um 1
             index--;
         }
@@ -93,7 +110,7 @@ function showPrevious() {
 
 //start app
 //Falls der index nicht definiert ist ...
-if (artikel === undefined){
+if (artikel === undefined) {
     //... dann setze den index auf 0 (Anfang)
     index = 0;
     //speichere wieder den index im Browser-Speicher
@@ -103,3 +120,4 @@ if (artikel === undefined){
     //zeige den Eintrag
     showUI();
 }
+
