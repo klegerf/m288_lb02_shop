@@ -1,6 +1,6 @@
 'use strict'
 
-// Fetch existing tasks from localStorage
+// Fetch existing Warenkorb from localStorage
 const getSavedWarenkorb = () => {
     //read from browser storage
     const itemsJSON = localStorage.getItem('items');
@@ -12,21 +12,18 @@ const getSavedWarenkorb = () => {
         } else {
             return [];
         }
-        //line 9 to 13 can be replaced one line below
-        //that accomplish the same
-        //return itemsJSON ? JSON.parse(itemsJSON) : [];
     } catch (e) {
         return [];
     }
 }
 
-// Save tasks to localStorage
+// Save Warenkorb to localStorage
 const saveWarenkorb = (items) => {
     //write to browser storage
     localStorage.setItem('items', JSON.stringify(items));
 }
 
-// Remove task by id
+// Remove item by id
 const removeTask = (id) => {
     //find task by id
     const taskIndex = warenkorb
@@ -39,14 +36,14 @@ const removeTask = (id) => {
 }
 
 // Toggle the completed value for a given task
-const toggleTask = (id) => {
+/*const toggleTask = (id) => {
     const task = warenkorb
         .find((task) => task.id === id);
 
     if (task) {
         task.completed = !task.completed;
     }
-}
+}*/
 
 // Render application warenkorb
 const renderWarenkorb = (warenkorb) => {
@@ -61,7 +58,8 @@ const renderWarenkorb = (warenkorb) => {
 // Get the DOM elements for an individual item
 const generateWarenkorbDOM = (item) => {
     const itemEl = document.createElement('div');
-    const itemText = document.createElement('span');
+    const itemText = document.createElement('div');
+    itemText.className = "warenkorb-bold";
     const itemPrice = document.createElement('span');
     /* const removeButton = document.createElement('button'); */
 

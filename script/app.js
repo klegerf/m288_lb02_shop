@@ -1,8 +1,4 @@
 /**
- * Webapp with Pagination
- */
-
-/**
  * Deklaration der Variablen
  */
 let warenkorb = getSavedWarenkorb();
@@ -11,7 +7,7 @@ let index;
 let artikel = undefined;
 
 /**
- * Ausgabe zeigen
+ * Artikel zeigen
  */
 function showUI() {
     //Identification
@@ -35,13 +31,13 @@ function showUI() {
 }
 
 /**
- * Event for a new item
+ * Event für einen neuen Artikel im Warenkorb
  */
 function addArticle() {
     //add new item to cart with push-method into JSON-object
     warenkorb.push({
         id: uuidv4(),
-        text: `${artikel.art}`+ "\n",
+        text: `${artikel.art}`,
         price: `${artikel.preis}`
     });
 

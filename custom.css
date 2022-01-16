@@ -117,11 +117,16 @@ i:hover {
 
 #warenkorb {
     position: fixed;
-    width: 20%;
-    height: 30%;
-    top: 200px;
+    width: 300px;
+    height: 300px;
+    top: 350px;
     right: 0px;
     color: #ffffff;
     background-color: #212529;
     padding: 8px;
+}
+
+.warenkorb-bold {
+    font-weight: 700;
+    font-size: 18px;
 }
