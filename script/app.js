@@ -16,7 +16,7 @@ function showUI() {
         `Farbe: ${artikel.farbe}<br>` +
         `Grösse: ${artikel.size}<br>` +
         `Beschrieb: ${artikel.beschreibung}<br>` +
-        `Preis: ${artikel.preis}`;
+        `Preis: ${artikel.preis} CHF`;
 
     htmlObj = document.getElementById("bild");
     htmlObj.innerHTML =
@@ -38,7 +38,7 @@ function addArticle() {
     warenkorb.push({
         id: uuidv4(),
         text: `${artikel.art}`,
-        price: `${artikel.preis}`
+        price: `${artikel.preis} CHF`
     });
 
     //save tasks

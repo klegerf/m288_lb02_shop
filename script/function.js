@@ -85,3 +85,9 @@ const generateSummaryDOM = (warenkorb) => {
     summary.textContent = `${warenkorb.length} Artikel im Warenkorb`;
     return summary;
 }
+
+/*const generatePriceDOM = (warenkorb) => {
+    const pricesummary = document.createElement('h4');
+    pricesummary.textContent = `${warenkorb.length} CHF;
+    return pricesummary;
+} */
