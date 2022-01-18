@@ -93,6 +93,5 @@ const generateSummaryDOM = (warenkorb) => {
     return pricesummary;
 }
 
-
 function total += warenkorb.items.id] * item.id.price;
 document.getElementById("total").innerHTML ="TOTAL: CHF" + total; */

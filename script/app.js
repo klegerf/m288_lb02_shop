@@ -47,11 +47,8 @@ function addArticle() {
     renderWarenkorb(warenkorb);
 }
 
-
-
-
 /**
- * Nächster Eintrag (Record) zeigen
+ * Nächster Artikel  zeigen
  */
 function showNext() {
     //Index aus dem Browser-Speicher lesen
@@ -78,7 +75,7 @@ function showNext() {
 }
 
 /**
- *  Vorhergehender Eintrag (Record) zeigen
+ *  Vorhergehender Artikel zeigen
  */
 function showPrevious() {
     //Index aus dem Browser-Speicher lesen
