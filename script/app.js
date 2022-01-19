@@ -41,9 +41,9 @@ function addArticle() {
         price: `${artikel.preis} CHF`
     });
 
-    //save tasks
+    //save warenkorb
     saveWarenkorb(warenkorb);
-    //show tasks
+    //show warenkorb
     renderWarenkorb(warenkorb);
 }
 
