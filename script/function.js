@@ -24,18 +24,18 @@ const saveWarenkorb = (items) => {
 }
 
 // Remove item by id
-const removeTask = (id) => {
-    //find task by id
-    const taskIndex = warenkorb
-        .findIndex((task) => task.id === id);
+const removeItem = (id) => {
+    //find item by id
+    const itemIndex = warenkorb
+        .findIndex((item) => item.id === id);
 
-    //remove task
-    if (taskIndex > -1) {
-        warenkorb.splice(taskIndex, 1);
+    //remove item
+    if (itemIndex > -1) {
+        warenkorb.splice(itemIndex, 1);
     }
 }
 
-// Render application warenkorb
+// Render application Warenkorb
 const renderWarenkorb = (warenkorb) => {
     document.querySelector('#warenkorb').innerHTML = '';
 
@@ -71,7 +71,7 @@ const generateWarenkorbDOM = (item) => {
     removeButton.textContent = 'x';
     itemEl.appendChild(removeButton);
     removeButton.addEventListener('click', () => {
-        removeTask(item.id);
+        removeItem(item.id);
         saveWarenkorb(warenkorb);
         renderWarenkorb(warenkorb);
     });
