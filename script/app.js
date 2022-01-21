@@ -10,7 +10,7 @@ let artikel = undefined;
  * Artikel zeigen
  */
 function showUI() {
-    //Identification
+    //Zeige die verschiedenen Artikel
     let htmlObj = document.getElementById("beschrieb");
     htmlObj.innerHTML =
         `Farbe: ${artikel.farbe}<br>` +
