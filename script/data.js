@@ -42,7 +42,7 @@ let sortimentListe =
     },{
         "art": "Sticker Set",
         "farbe": colorList[0],
-        "bild": "images/articles/...",
+        "bild": "images/articles/sticker.jpg",
         "size": sizeList[5],
         "beschreibung": "Das Set beinhaltet 5 TR6 Sticker.",
         "preis": "4.–"
