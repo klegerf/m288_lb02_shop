@@ -28,23 +28,16 @@ let sortimentListe =
     },{
         "art": "T-Shirt I believe in TR6",
         "farbe": colorList[0],
-        "bild": "images/articles/...",
+        "bild": "images/articles/believe_in_shirt.jpg",
         "size": sizeList[3],
         "beschreibung": "Mit dem Kauf diese Shirts unterstützt du den Nachwuchs!",
         "preis": "20.–"
-    },{
-        "art": "Headspin Cap",
-        "farbe": colorList[0],
-        "bild": "images/articles/...",
-        "size": sizeList[5],
-        "beschreibung": "Die perfekte Kappe für alle B-Boys & B-Girls.",
-        "preis": "15.–"
     },{
         "art": "Sticker Set",
         "farbe": colorList[0],
         "bild": "images/articles/sticker.jpg",
         "size": sizeList[5],
-        "beschreibung": "Das Set beinhaltet 5 TR6 Sticker.",
+        "beschreibung": "Das Set beinhaltet 6 TR6 Sticker.",
         "preis": "4.–"
     }
     ]
