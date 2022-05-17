@@ -168,7 +168,7 @@
                     </p>
                 </div>
             </div>
-            <!-- Kontaktformular -->
+            <!-- altes Kontaktformular
             <div id="kontakt" class="m-auto py-5">
                 <h1 class="pt-3">Kontakt</h1>
                 <div>
@@ -189,20 +189,103 @@
                                 <label for="exampleFormControlInput1"></label>
                                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                             </div>
+                            <div class="col form-group mt-3">
+                                <label for="phone"></label>
+                                <input type="tel" class="form-control" id="phone" placeholder="+41 79 123 45 67">
+                            </div>
+                        </div>
+                        <div>
                             <select class="col form-select form-select-md" aria-label=".form-select-sm example">
                                 <option selected>Dein Interesse</option>
                                 <option value="1">Anfrage für einen Auftritt</option>
                                 <option value="2">Anfrage für einen Workshop</option>
                                 <option value="3">Sonstiges</option>
                             </select>
+                        </div>  -->
+                        <!-- Antwort
+                        <div class="mt-5">Ich wünsche eine Kontaktaufnahme per...</div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">E-Mail</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Telefon</label>
                         </div>
                         <div class="form-group mt-3">
                             <label for="exampleFormControlTextarea1"></label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Bemerkungen" rows="10"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Bemerkungen" rows="8"></textarea>
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-dark">Absenden</button>
                         </div>
+                    </form>
+                </div>
+            </div> -->
+
+            <!-- neues Kontaktformular -->
+            <div id="kontakt" class="m-auto py-5">
+                <h1 class="pt-3">Kontakt</h1>
+                <div>
+                    <p class="lh-lg">
+                        Falls wir dein Interesse geweckt haben, freuen wir uns auf deine Anfrage! Ob für einen Firmenanlass, als Showcase für ein Battle oder als Überraschungs-Auftritt für ein Geburtstag, die Crews sorgen für einen spannende Unterhaltung.
+                    </p>
+                </div>
+                <div>
+                    <form id="form" class="form">
+                        <div class="form-control">
+                            <label for="vorname"></label>
+                            <input type="text" id="vorname" placeholder="Vorname" />
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="nachname"></label>
+                            <input type="text" id="nachname" placeholder="Nachname" />
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="email"></label>
+                            <input type="text" id="email" placeholder="E-Mail" />
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="telefon"></label>
+                            <input type="tel" id="telefon" placeholder="Telefon" />
+                            <small>Error message</small>
+                        </div>
+
+                        <div>
+                            <div class ="pb-2">Bitte wähle ein Thema aus:</div>
+                            <select name="thema">
+                                <option value="val1" selected>Anfrage für einen Auftritt</option>
+                                <option value="val2">Anfrage für einen Workshop</option>
+                                <option value="val3">Sonstiges</option>
+                            </select>
+                        </div>
+
+                        <div class="form-control">
+                            <div class="mt-5">Ich wünsche eine Kontaktaufnahme per...</div>
+                            <label for="antwort"></label>
+                            <input type="radio" name="room" value="budget" id="antwort"/>Budget
+                            <input type="radio" name="room" value="standard"/>Standard
+                            <small>Error message</small>
+                        </div>
+
+                        <!-- Antwort mit radio button von bootstrap
+                        <div>
+                            <div class="mt-5">Ich wünsche eine Kontaktaufnahme per...</div>
+                            <div class="form-check form-check-inline" id="antwort">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">E-Mail</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Telefon</label>
+                             </div>
+                        </div>  -->
+
+                        <button type="submit">Absenden</button>
+
                     </form>
                 </div>
             </div>
@@ -230,7 +313,7 @@
                         <div class="card-body">
                             <h4 class="card-title" id="titel">?</h4>
                             <p class="card-text" id="beschrieb">?</p>
-                            <button type="submit" class="btn btn-dark" id="add-to-cart">Add to Cart</button>
+                            <button type="submit" class="btn btn-dark" id="add-to-cart">In den Warenkorb</button>
                         </div>
                     </div>
                 </div>
@@ -247,7 +330,18 @@
             </nav>
             <div id="summary"></div>
             <div id="warenkorb"></div>
-            <!-- <div id="total"></div> -->
+           <!-- dropdown
+            <form>
+                <p>
+                    Bitte wähle deine Grösse<br>
+                    <select name="groesse">
+                        <option value="val1" selected>XS</option>
+                        <option value="val2">S</option>
+                        <option value="val3">M</option>
+                        <option value="val4">L</option>
+                    </select>
+                </p>
+            </form> -->
         </div>
     </div>
 </main>
@@ -272,6 +366,7 @@
 <script src="script/data.js"></script>
 <script src="script/app.js"></script>
 <script src="script/uuid_v4.js"></script>
+<script src="script/validate-inputs.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
